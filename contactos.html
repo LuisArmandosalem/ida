@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MVC</title>
+  </head>
+  <body>
+      <h1>Lista de Contactos</h1>
+      <table id="contact_form" style="border: solid 1px black;">
+        <thead>
+          <tr>
+            <th>Contacto</th>
+            <th>Telefono Personal</th>
+            <th>Telefono Oficina</th>
+            <th>Correo Personal</th>
+            <th>Correo Oficina</th>
+            <th>Fecha Nacimiento</th>
+          </tr>
+          <tbody id="tbody-contacts">
+
+          </tbody>
+        </thead>
+      </table>
+    <script>
+        const MVC = {};
+    </script>
+    <script src="./js/model.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/controller.js"></script>
+    <script src="./main.js"></script>
+    <script>
+      MVC.controllerInst.getAllContacts();
+      document.body.addEventListener('onLoadDataContacts', (event) => {
+      var contacts = event.detail;
+      var cell = [];
+      console.log(contacts);
+        var table = document.getElementById("tbody-contacts");
+          for (let key in contacts) {
+            var row = table.insertRow(key);
+            for (var j = 0; j < 1; j++) {
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].nombre_contacto;
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].telefono_personal;
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].telefono_oficina;
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].correo_personal;
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].correo_oficina;
+              cell = row.insertCell();
+              cell.innerHTML = contacts[key].fecha_nacimiento;
+            }
+            
+          }
+          
+		});
+  </script>
+  </body>
+</html>

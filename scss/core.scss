@@ -1,0 +1,35 @@
+
+@import 'vars';
+@import 'reset';
+@import 'helpers';
+
+header{
+  display: block;
+  width: 100%;
+  height: $height-base;  
+  line-height: $height-base;
+}
+
+.title-main{
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text-secondary-color;
+}
+.bg-main{
+  background-color: $main-color;
+}
+.center{
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  article{
+    display: table-cell;
+    width: 33%;
+    font-family: Arial, Helvetica, sans-serif;
+    h1{
+      color: $text-primary-color
+    }
+  }
+}

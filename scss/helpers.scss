@@ -1,0 +1,40 @@
+.title{
+  font-size: 2rem;
+}
+.sub-title{
+  font-size: 1.5rem;
+}
+.text{
+  font-size: 1rem;
+}
+.btn{
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-btn{
+  background-color: $main-color;
+}
+.secondary-btn{
+  background-color: $thertiary-color;
+}
+.success-btn{
+  background-color: $main-color;
+}
+.cancel-btn{
+  background-color: $failure-color;
+}
+.warning-btn{
+  background-color: $warning-color;
+}
+
+.margin10{
+  margin: 10px;
+}
+.padding10{
+  padding: 10px;
+}
+.margin-bottom10{
+  margin-bottom: 10px;
+}
